@@ -1,0 +1,226 @@
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding-top: 60px; /* Adiciona espaço no topo para o menu fixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Barra de navegação fixa */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 1000; /* Garante que a barra de navegação fique sobre outros elementos */
+    padding: 10px 0; /* Espaçamento ao redor da barra */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* Permite que os itens se ajustem em múltiplas linhas */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Ajuste para o carrossel de imagens em telas maiores que 768px */
+@media screen and (min-width: 769px) {
+    .carousel img {
+        width: 60%; /* Reduz o tamanho da imagem para 60% (40% de redução) */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+}
+
+/* Estilo para o menu responsivo */
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Menu hamburger */
+.menu-toggle {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+#navbar {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o menu hambúrguer em telas pequenas */
+    }
+    #navbar ul {
+        display: none; /* Esconde o menu em telas pequenas */
+        flex-direction: column;
+        align-items: center;
+    }
+    #navbar ul li {
+        margin: 10px 0;
+    }
+    #navbar.active ul {
+        display: flex; /* Exibe o menu ao clicar no hambúrguer */
+    }
+}
+
+/* Estilo para as seções do site */
+section {
+    padding: 60px 20px; /* Adiciona espaço para não sobrepor o menu fixo */
+    margin: 20px;
+    width: 80%; /* Limita a largura do conteúdo */
+    max-width: 1200px; /* Limita a largura máxima */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o conteúdo da agenda */
+.agenda iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* Estilo para o formulário de agendamento */
+#agendamento form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#agendamento label {
+    font-size: 18px;
+}
+
+#agendamento input, #agendamento button {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#agendamento button {
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#agendamento button:hover {
+    background-color: #666;
+}
+
+/* Estilo para as imagens */
+img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner pai */
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o contêiner sem deformar */
+}
+
+/* Estilo para a galeria de imagens */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    flex-wrap: nowrap; /* As imagens não quebram linha */
+    overflow: hidden;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Cada slide ocupa 100% da largura do contêiner */
+    display: none; /* Inicialmente, todas as imagens são escondidas */
+}
+
+.carousel-item.active {
+    display: block; /* Apenas a imagem com a classe "active" será exibida */
+}
+
+/* Botões de navegação do carrossel */
+button.prev, button.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo para a tabela de preços */
+#tabela-precos table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#tabela-precos th, #tabela-precos td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#tabela-precos th {
+    background-color: #444;
+    color: white;
+}
