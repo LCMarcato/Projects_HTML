@@ -1,0 +1,26 @@
+
+João Band
+O verdadeiro Rock
+
+Menu Inicial
+* Inicio
+* Sobre
+* Contato
+* Agendar
+
+===[FOTO DA BANDA]===
+
+=Sobre
+Seja bem vindo ao Website do João Band.
+Uma banda de rock do subúrbio do sul do pais
+
+=Contato
+
+Email: contato@joaoband.com.br
+
+=Agenda
+Local - Cidade - Data
+Estádio Joaquim, Curitiba 10/12/2020
+Feira Municipal, São Paulo, 15/12/2020
+Squash , Indaial , 04/01/2021
+Vila germanica , Bluemenau, 24/01/2021
